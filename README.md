@@ -30,7 +30,7 @@ custid: Customer ID (Foreign Key)
 bid: Branch ID (Foreign Key)
 loan_amount: Loan Amount
 
-**# SQL Queries for Bank Database**
+**SQL Queries for Bank Database**
 This document provides detailed descriptions of various SQL queries executed on a bank database. Each query is designed to perform specific operations, from data retrieval and sorting to complex joins and aggregations.
 
 **Queries Description**
@@ -49,7 +49,7 @@ SELECT account.acnumber, customer.custid, customer.fname, customer.lname, accoun
 FROM account
 INNER JOIN customer ON account.custid = customer.custid;
 
-**5. Counting Customers in a Specific City****
+**5. Counting Customers in a Specific City**
 This query counts the number of customers residing in Delhi.
 SELECT (SELECT COUNT(city) FROM customer WHERE city = 'Delhi') AS Cust_Count;
 
