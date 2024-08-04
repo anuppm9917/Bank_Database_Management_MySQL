@@ -43,6 +43,7 @@ ORDER BY EXTRACT(YEAR FROM dob), fname ASC;
 This query selects customer details and concatenates the middle name or the last name, depending on the availability of the middle name.
 SELECT custid, fname, IF(mname IS NOT NULL, mname, lname) AS cust_name
 FROM customer;
+
 **4. Joining Account and Customer Tables**
 This query joins the account and customer tables to retrieve account numbers along with the respective customer details and account open date.
 SELECT account.acnumber, customer.custid, customer.fname, customer.lname, account.aod
